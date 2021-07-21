@@ -14,7 +14,7 @@ public class codePiece {
 		codePiece cp1 = new codePiece();
 		cp1.a=24;
 		System.out.println("int is: "+cp1.a);
-		codePiece.a=14;
+		codePiece.a=114;
 		System.out.println("int is: "+a);
 	}
 
