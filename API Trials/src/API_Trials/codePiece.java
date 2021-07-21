@@ -12,7 +12,7 @@ public class codePiece {
 		//b = 13;
 		System.out.println("int is: "+a);
 		codePiece cp1 = new codePiece();
-		cp1.a=20;
+		cp1.a=24;
 		System.out.println("int is: "+cp1.a);
 		codePiece.a=14;
 		System.out.println("int is: "+a);
