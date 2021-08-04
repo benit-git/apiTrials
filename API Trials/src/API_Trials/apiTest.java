@@ -143,6 +143,12 @@ public class apiTest {
 		//System.out.println(o.jsonPath().toString());
 		
 			}
+	
+	public void Auth_post_Test()
+	{
+		System.out.println("This method is for authentication calls");	
+		
+	}
 
 	public static void main(String[] args) throws InterruptedException {
 
