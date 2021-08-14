@@ -14,12 +14,12 @@ public class ResearchAPI {
 
 		RestAssured.baseURI = "https://jsonplaceholder.typicode.com/photos";
 
-		Response rsp = given().contentType("application/json").when().get().then().extract().response();
+		Response rsp = given().contentType("/application/json").when().get().then().extract().response();
 
-		ArrayList id = (ArrayList) rsp.jsonPath().getList("albumId");
+		//ArrayList id = (ArrayList) rsp.jsonPath().getList("albumId");
 		
 		
-		System.out.println(id);
+		rsp.jsonPath().prettyPrint();
 	}
 
 	public static void main(String[] args) {
