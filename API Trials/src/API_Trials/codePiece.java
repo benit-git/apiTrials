@@ -4,6 +4,7 @@ public class codePiece {
 	
 	static int a =10;
 	final int b = 12;
+	static String stcs = "before";
 	
 	public void intChange(int i)
 	{
@@ -17,12 +18,23 @@ public class codePiece {
 		codePiece.a=114;
 		System.out.println("int is: "+a);
 	}
+	
+	public void codehausTest(String a, String b)
+	{
+		System.out.println("Static value with mvn params: "+stcs+" and value "+a+" and "+b);
+		codePiece.stcs = "After";
+		System.out.println("Static variable changed to :" +stcs);
+	}
 
+	//mvn exec:java@before-execution -DfName=Benit -DlName=Shetty
+	//RestProj_Bizs>mvn clean install package -Drelease.artifactId=RestAPIBiz -Drelease.version=10.6 -Drelease.svm.version=74
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		codePiece cp = new codePiece();
-		cp.intChange(8);
-		System.out.println("int is: "+cp.a);
+		//cp.intChange(8);
+		//System.out.println("int is: "+cp.a);
+		cp.codehausTest(args[0], args[1]);
 	}
 
 }

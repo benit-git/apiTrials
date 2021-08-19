@@ -5,17 +5,70 @@
 	<groupId>API_Trial_codes</groupId>
 	<artifactId>apiTrials</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>API Trials</name>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.7.0</version>
 				<configuration>
-					<release>15</release>
+					<source>1.8</source>
+					<target>1.8</target>
+					<verbose>true</verbose>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>before-execution</id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>API_Trials.codePiece</mainClass>
+							<arguments>
+								<argument>${fName}</argument>
+								<argument>${lName}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<!--<execution>
+						<id>end-execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>API_Trials.codeHausClass2</mainClass>
+							<arguments>
+								<argument>${fName}</argument>
+								<argument>${lName}</argument>
+							</arguments>
+						</configuration>
+					</execution> -->
+				</executions> 
+				
+				<!--NOTE: 1) When u are not able to run codehaus through command line and shows error "mainClass Parameter not found" 
+				then the configuration should be out of the Executions tab (Below config)
+						2) If we have to run multiple class using codehaus then the configurations should be inside the Executions Tab(Above config)
+						  -->
+
+				<!-- <configuration> 
+					<mainClass>API_Trials.codePiece</mainClass> 
+					<arguments> 
+					<argument>${fName}</argument> 
+					<argument>${lName}</argument> 
+					</arguments> 
+					</configuration> -->
+			</plugin>
+
 		</plugins>
 	</build>
 	<dependencies>
@@ -61,6 +114,8 @@
 			<version>2.3.1</version>
 		</dependency>
 
-
 	</dependencies>
+
+
+
 </project>
