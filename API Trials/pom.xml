@@ -39,38 +39,27 @@
 							</arguments>
 						</configuration>
 					</execution>
-					<!--<execution>
-						<id>end-execution</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>java</goal>
-						</goals>
-						<configuration>
-							<mainClass>API_Trials.codeHausClass2</mainClass>
-							<arguments>
-								<argument>${fName}</argument>
-								<argument>${lName}</argument>
-							</arguments>
-						</configuration>
-					</execution> -->
-				</executions> 
-				
-				<!--NOTE: 1) When u are not able to run codehaus through command line and shows error "mainClass Parameter not found" 
-				then the configuration should be out of the Executions tab (Below config)
-						2) If we have to run multiple class using codehaus then the configurations should be inside the Executions Tab(Above config)
-						  -->
+					<!--<execution> <id>end-execution</id> <phase>verify</phase> <goals> 
+						<goal>java</goal> </goals> <configuration> <mainClass>API_Trials.codeHausClass2</mainClass> 
+						<arguments> <argument>${fName}</argument> <argument>${lName}</argument> </arguments> 
+						</configuration> </execution> -->
+				</executions>
 
-				<!-- <configuration> 
-					<mainClass>API_Trials.codePiece</mainClass> 
-					<arguments> 
-					<argument>${fName}</argument> 
-					<argument>${lName}</argument> 
-					</arguments> 
+				<!--NOTE: 1) When u are not able to run codehaus through command line 
+					and shows error "mainClass Parameter not found" then the configuration should 
+					be out of the Executions tab (Below config) 2) If we have to run multiple 
+					class using codehaus then the configurations should be inside the Executions 
+					Tab(Above config) -->
+
+				<!-- <configuration> <mainClass>API_Trials.codePiece</mainClass> <arguments> 
+					<argument>${fName}</argument> <argument>${lName}</argument> </arguments> 
 					</configuration> -->
 			</plugin>
 
 		</plugins>
 	</build>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
